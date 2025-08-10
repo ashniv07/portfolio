@@ -5,6 +5,9 @@ function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: false, amount: 0.3 });
 
+  // Replace this with your actual resume URL or file path
+  const resumeUrl = "https://drive.google.com/file/d/1sFyiG1rbl5eily7ogtVebQul3Z8sdC0P/view?usp=sharing";
+
   return (
     <div ref={ref} className="relative bg-[#282120] h-screen max-lg:min-h-screen max-lg:p-6 max-md:p-4 max-sm:p-2">
       
@@ -49,8 +52,20 @@ function About() {
         <p className="text-justify font-mono mt-10 text-white text-[20px] max-lg:text-base max-lg:mt-6 max-md:text-sm max-md:mt-4 max-sm:text-xs max-sm:mt-3">
           I'm just a <b>developer</b> who loves blending code with design to create things that are both functional and visually engaging. <b>Design</b> isn't just a skill for me; it's a way to make technology more meaningful and enjoyable.
           <br/><br/>
-          Right now, I'm exploring <b>AI</b> and all its possibilities, always curious about how technology can be used in new and exciting ways. Learning is a big part of my journey, and I'm passionate about growing my skills while enjoying the process.
+          Right now, I'm exploring <b>AI</b> and all its possibilities, always curious about how technology can be used in new and exciting ways. Learning is a big part of my journey, and I’m passionate about growing my skills while enjoying the process.
         </p>
+
+        {/* Resume Button */}
+        <div className="mt-10 flex justify-center">
+          <a 
+            href={resumeUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-[#D9A299] hover:bg-[#b8907e] text-black font-bold py-3 px-8 rounded-lg transition-colors duration-300"
+          >
+            - View My Resume -
+          </a>
+        </div>
       </div>
 
       {/* Pink Glow Animation */}
