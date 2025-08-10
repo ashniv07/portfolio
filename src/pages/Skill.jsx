@@ -76,7 +76,7 @@ function Skill() {
                 <img
                   src={img}
                   alt={`skill-${index}`}
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-fit rounded-2xl"
                 />
               </motion.div>
             ))}
@@ -111,7 +111,7 @@ function Skill() {
                 <img
                   src={img}
                   alt={`skill-${index}`}
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-fit rounded-2xl"
                 />
               </motion.div>
             ))}
