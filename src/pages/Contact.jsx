@@ -11,11 +11,11 @@ function Contact() {
         {/* Left - Phone Icon */}
         <div className="relative flex items-center justify-center md:justify-start w-full md:w-1/2">
           <BsTelephoneInboundFill className="text-black text-[220px] drop-shadow-[0_0_25px_rgba(128,128,128,0.8)]" />
-          <span className="absolute text-black text-3xl ml-50 font-bold">Contact Me @</span>
+          <span className="absolute text-black font-mono text-3xl ml-50 font-bold">Contact Me @</span>
         </div>
 
         {/* Right - Icons with Links */}
-        <div className="flex flex-col gap-10 w-full md:w-1/2 ml-10">
+        <div className="flex flex-col gap-10 font-mono w-full md:w-1/2 ml-10">
           {/* LinkedIn */}
           <div className="flex items-center gap-4">
             <FaLinkedin className="text-black font-bold text-4xl drop-shadow-[0_0_15px_rgba(0,0,0,0.6)]" />

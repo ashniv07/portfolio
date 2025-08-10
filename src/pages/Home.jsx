@@ -74,9 +74,9 @@ function Home() {
               damping: 10,
               delay: isInView ? 0.8 + letters.length * 0.15 + 0.3 : 0
             }}
-            className="absolute left-[23.75rem] top-[20.75rem] font-bold text-[20px] font-serif text-[#D9A299]"
+            className="absolute  left-[23.75rem] top-[20.75rem] font-bold text-[20px] font-serif text-[#D9A299] whitespace-nowrap"
           >
-            AshleyNivedhaJohnson
+            Ashley Nivedha Johnson
           </motion.p>
         </div>
       </div>

@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <div className='bg-[#ede5d9] fixed top-0 left-0 right-0 z-30 '>
+    <div className='bg-[#ede5d9] font-mono font-bold fixed top-0 left-0 right-0 z-30 '>
       <ul className="flex ml-[100px] gap-[250px] list-none p-5 mt-5 ">
         <li><button onClick={() => scrollToSection('home-section')} className="font-bold cursor-pointer hover:text-[#D9A299] z-50 transition-colors">Home</button></li>
         <li><button onClick={() => scrollToSection('about-section')} className="font-bold text-[#D9A299] cursor-pointer hover:text-black transition-colors">About</button></li>

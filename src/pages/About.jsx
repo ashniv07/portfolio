@@ -10,7 +10,7 @@ function About() {
       
       {/* "About" */}
       <motion.h1
-        className="absolute text-[160px] pt-30 font-bold left-230 text-white"
+        className="absolute text-[160px] pt-40 font-mono font-bold left-230 text-white"
         initial={{ y: -100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{
@@ -25,7 +25,7 @@ function About() {
 
       {/* "Me" */}
       <motion.h3
-        className="absolute text-[120px] pt-80 font-bold left-300 text-white"
+        className="absolute text-[120px] pt-90 font-bold font-mono left-300 text-white"
         initial={{ y: -100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{
@@ -43,14 +43,13 @@ function About() {
       <div
         className="relative box-content w-[500px] h-[550px] left-50 top-20 p-6 border-4 border-transparent animate-pink-glow rounded-xl"
       >
-        <p className="text-justify text-white font-bold">
-          Hi, This is Ashley. Welcome to my space.<br /> 
-          Just a girl who gets super excited when it comes to designing <br /> 
-          Coding and fixing bugs is my thing. <br /> 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br /> 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
+        <p className="text-justify font-mono font-bold text-white text-[35px] ">
+          Hi, This is Ashley.<br/> Welcome to my space.<br /></p>
+          <p className="text-justify font-mono mt-10 text-white text-[20px] ">
+          I’m just a <b>developer</b> who loves blending code with design to create things that are both functional and visually engaging. <b>Design</b> isn’t just a skill for me; it’s a way to make technology more meaningful and enjoyable.
+          <br/><br/>
+Right now, I’m exploring <b>AI</b> and all its possibilities, always curious about how technology can be used in new and exciting ways. Learning is a big part of my journey, and I’m passionate about growing my skills while enjoying the process.
+         
         </p>
       </div>
 
