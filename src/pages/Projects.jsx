@@ -10,7 +10,7 @@ const projects = [
     id: 1, 
     img: Bus, 
     title: "BusConnect", 
-    description: "Developed Bus Connect – Smart Transit System for Chennai’s MTC buses, integrating AI, GPS, and YOLO-based crowd detection to enable real-time tracking, smart ticketing, route suggestions, and AI-powered violence detection, enhancing commuter safety, efficiency, and overall service reliability.",
+    description: "Developed Bus Connect – Smart Transit System for Chennai's MTC buses, integrating AI, GPS, and YOLO-based crowd detection to enable real-time tracking, smart ticketing, route suggestions, and AI-powered violence detection, enhancing commuter safety, efficiency, and overall service reliability.",
     github: "https://github.com/YourUsername/BusConnect"
   },
   { 
@@ -53,23 +53,23 @@ function Projects() {
   return (
     <div
       ref={containerRef}
-      className="relative font-mono bg-[#ede5d9] min-h-screen overflow-hidden flex flex-col items-center justify-center"
+      className="relative font-mono bg-[#ede5d9] min-h-screen overflow-hidden flex flex-col items-center justify-center max-lg:p-6 max-md:p-4 max-sm:p-2"
     >
       {/* Animated Title */}
       <motion.div
-        className="flex items-center gap-4 mt-10"
+        className="flex items-center gap-4 mt-10 max-lg:gap-3 max-md:gap-2 max-sm:gap-1"
         initial={{ y: -100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 120, damping: 10 }}
       >
-        <GiSpades size={50} className="text-black" />
-        <h1 className="font-bold text-5xl">My Projects</h1>
-        <GiSpades size={50} className="text-black" />
+        <GiSpades size={50} className="text-black max-lg:w-10 max-lg:h-10 max-md:w-8 max-md:h-8 max-sm:w-6 max-sm:h-6" />
+        <h1 className="font-bold text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-xs:text-xl">My Projects</h1>
+        <GiSpades size={50} className="text-black max-lg:w-10 max-lg:h-10 max-md:w-8 max-md:h-8 max-sm:w-6 max-sm:h-6" />
       </motion.div>
 
-      {/* Carousel */}
+      {/* Desktop Carousel */}
       <motion.div
-        className="mt-8 flex gap-30 px-10 cursor-grab active:cursor-grabbing"
+        className="mt-8 flex gap-30 px-10 cursor-grab active:cursor-grabbing max-lg:hidden"
         initial={{ x: 200, opacity: 0 }}
         animate={isInView ? { x: -scrollX, opacity: 1 } : { x: 200, opacity: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -108,6 +108,42 @@ function Projects() {
           </a>
         ))}
       </motion.div>
+
+      {/* Mobile Grid Layout */}
+      <div className="hidden max-lg:block w-full mt-8">
+        <div className="grid grid-cols-1 gap-6 max-md:gap-4 max-sm:gap-3">
+          {projects.map((project) => (
+            <a 
+              key={project.id} 
+              href={project.github} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="no-underline"
+            >
+              <div className="relative w-full h-[400px] max-md:h-[350px] max-sm:h-[300px] cursor-pointer perspective rounded-xl transition-transform duration-300 hover:scale-105 animate-black-glow">
+                <div className="relative w-full h-full transition-transform duration-500 transform-style preserve-3d group hover:rotate-y-180">
+                  
+                  {/* Front */}
+                  <div className="absolute w-full h-full backface-hidden rounded-xl overflow-hidden bg-white flex flex-col">
+                    <div className="h-[60%] p-4 overflow-hidden flex items-center justify-center">
+                      <img src={project.img} alt={project.title} className="w-full h-full object-contain" />
+                    </div>
+                    <div className="flex-1 flex items-center justify-center p-4 bg-white">
+                      <h2 className="text-lg font-bold text-black text-center max-md:text-base max-sm:text-sm">{project.title}</h2>
+                    </div>
+                  </div>
+
+                  {/* Back */}
+                  <div className="absolute w-full h-full bg-[#282120] text-white flex flex-col justify-center items-center text-center p-4 rounded-xl rotate-y-180 backface-hidden">
+                    <h2 className="text-xl font-bold mb-2 max-md:text-lg max-sm:text-base">{project.title}</h2>
+                    <p className="text-sm max-md:text-xs max-sm:text-xs">{project.description}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
 
       <style>{`
         .perspective { perspective: 1000px; }
